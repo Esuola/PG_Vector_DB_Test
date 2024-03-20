@@ -109,18 +109,15 @@ https://github.com/pgvector/pgvector?tab=readme-ov-file#installation-notes
 COLLECTION_NAME = "The Project Gutenberg eBook of A Christmas Carol in Prose"
 
 CONNECTION_STRING = PGVector.connection_string_from_db_params(
-    driver=os.environ.get("PGVECTOR_DRIVER", "psycopg2"),
-    host=os.environ.get("PGVECTOR_HOST", "database-1.cbo0cyycynem.us-east-1.rds.amazonaws.com"),
-    port=int(os.environ.get("PGVECTOR_PORT", "5432")),
-    database=os.environ.get("PGVECTOR_DATABASE", "postgres"),
-    user=os.environ.get("PGVECTOR_USER", "postgres"),
-    password=os.environ.get("PGVECTOR_PASSWORD", "Password123"),
+    driver=os.environ.get("PGVECTOR_DRIVER", ""),
+    host=os.environ.get("PGVECTOR_HOST", ""),
+    port=int(os.environ.get("PGVECTOR_PORT", "")),
+    database=os.environ.get("PGVECTOR_DATABASE", ""),
+    user=os.environ.get("PGVECTOR_USER", ""),
+    password=os.environ.get("PGVECTOR_PASSWORD", ""),
     
 )
 
-#CONNECTION_STRING = "postgresql+psycopg2://postgres.bdfsohtqdfuflacmyifs:dR0mN8momcy36xQg@aws-0-eu-west-2.pooler.supabase.com:5432/pgvector?client_encoding=UTF8"
-
-print(CONNECTION_STRING)
 
 # create the store
 db = PGVector.from_documents(
