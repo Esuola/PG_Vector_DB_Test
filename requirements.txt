@@ -2,3 +2,8 @@ python-dotenv
 langchain
 pinecone-client
 pgvector
+psycopg2
+langchain-community
+langchain-openai
+psycopg2-binary
+tiktoken
